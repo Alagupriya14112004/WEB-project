@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+body {
+    background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20220121/pngtree-artistic-plaster-with-grungy-texture-check-out-more-of-this-design-in-my-portfolio-for-endless-d%C3%A9cor-options-photo-image_44042840.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    z-index: -1;
+}
+
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins' , sans-serif;
+}
+body{
+    color: #070707;
+}
+p {
+    font-size: 20px;
+    color: #000000;
+}
+.header{
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   padding: 20px 10%;
+   background:rgb(3, 200, 255);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   z-index:100;
+}
+.logo{
+    position:relative;
+    font-size: 25px;
+    color:#100e0e;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .5s ease ;
+}
+.navbar a{
+    font-size: 18px;
+    color: #f5ebeb;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+.navbar a:hover,
+.navbar a.active{
+    color:#00abf0;
+}
+.home{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10% ;
+    background: url(img/header.jpeg)no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+.home-content{
+    max-width: 600px;
+}
+.home-content h1{
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.home-content h3{
+    font-size: 32px;
+    font-weight: 700;
+    color:#ffffff;
+}
+.home-content p{
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+.home-content.btn-box{
+    display:flex;
+    justify-content: space-between;
+    width:345px;
+    height: 50px;
+}
+.btn-box a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height:100%;
+    background: #00abf0;
+    border:2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 19px;
+    color:#ededed;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+}
+.btn-box a:hover{
+    color:#00abf0;
+    background: #ededed;
+}
+.home-sci{
+    position: absolute;
+    bottom: 40px;
+    width:90px;
+    display:flex;
+    justify-content: space-between;
+}
+.home-sci a{
+    position: relative;
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 3px solid #00abf0;
+    border-radius: 50%;
+    font-size: 33px;
+    color: #00abf0;
+    text-decoration: none;
+}
+.home-sci a:hover{
+    color:#ededed;
+    background: #00abf0;
+}
+.home-imghover{
+    position: absolute;
+    top: 0;
+    right:30px;
+    width:500px;
+    height:50%;
+    background: transparent;
+    transition: 3s;
+}
+.about{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12% 8%;
+    gap:10em;
+    background:black;
+}
+.about-img img{
+    position:relative;
+    width:550px;
+    box-shadow: 0 0 25px #00abf0,
+                0 0 50px #00abf0;
+    border-radius: 50%;
+ }
+.about-content h2{
+    text-align: left;
+    color:#ededed;
+    font-size: 42px;
+}
+.about-content h3{
+    font-size: 62px;
+    color:#ededed;
+}
+.about-content p{
+    color: #ededed;
+    font-size: 20px;
+    margin: 2em 0 3em;
+}
+.services{
+    
+    background:black;
+    height:350px;
+    padding:0 10px;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap:40px;
+    margin-top:50px;
+    color:#ededed;
+    padding:30px;
+    border: 2px solid white;
+}
+.services-list p{
+    color: #ededed;
+}
+.sub-title{
+    color:#00abf0;
+}
+#projects{
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0,1);
+}
+.project{
+    margin-bottom: 20px;
+    padding: 10px;
+    border:1px solid #ededed;
+    border-radius: 5px;
+    background: black;
+}
+.project h4{
+    margin-top: 0;
+    color: #ededed;
+}
+.project p{
+    color:#ededed;
+}
+table{
+    width:100%;
+    border-collapse: collapse;
+}
+th,td{
+    padding-top:0;
+    border: 1px solid #ddd;
+    padding:8px;
+    text-align: left;
+    color:#ededed;
+    background: rgb(30, 30, 31);
+}
+th{
+    background: #000000;
+}
+th:first-child,td:first-child{
+    text-align: center;
+}
+.table-title{
+    font-size: 24px;
+    margin-bottom: 10px;
+    padding-top: 30px;
+    color:#ededed;
+    background: black;
+}
+footer{
+    color: #00abf0;
+    background-color:black;
+    text-align:center;
+    padding:30px;
+}
+.contact{
+    padding: 25px;
+    background: black;
+}
+
+footer a{
+    position: relative;
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    color: #ededed;
+    text-decoration: none;
+    font-size: 35px;
+}
+footer a:hover{
+    color: #ededed;
+    background: #00abf0;
+}
+</style>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+        <nav class="navbar">
+            <a href="#" class="active">Home</a>
+            <a href="#go">About me</a>
+            <a href="#skill">Skill</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section class="home">
+        <div class="home-content">
+        <h1>Hi.I'm Alagupriya K</h1>
+        <h3>Web Developer</h3> 
+         <p>I am actively seeking opportunities to collaborate on challenging web development projects 
+            where I can apply my expertise in front-end and back-end technologies to create impactful 
+            digital experiences. My objective is to work with a challenging environment where i could improve my knowledge and capabilities</p>
+          <div class="btn-box"> 
+            <a href="file:///C:\Users\alagu\Downloads\resume\Resume 12.pdf" download="resume.pdf" >See my CV</a>  
+          </div>
+        </div>
+        <span class="home-imghover"></span>
+    </section>
+    <section  id="go" class="about">
+        <div class="about-img">
+            <img src="https://t4.ftcdn.net/jpg/03/83/91/85/360_F_383918518_XWHxcaFVhzg37t1kN3Ro11f6ME5XC5DZ.webp" alt="">
+        </div>
+        <div class="about-content">
+            <h2 class="heading">Who <span>am I</span></h2>
+            <h3>Frontend <span>Developer</span></h3>
+            <p>My goal is to create unique and user-friendly websites that stand out.
+                Aiming to utilize expertise in HTML, CSS, JavaScript, and modern frameworks to
+                 develop scalable and engaging web platforms that align with client requirements.
+                 I am passionate about coding and enjoy learning new tools and technologies to enhance user experiences on the web.</p>
+        </div>
+    </section>
+    <div class="services">
+        <div id="skill"class="container">
+           <center> <h1 class="sub-title">My Fervant Fields</h1></center>
+            <div class="services-list">
+                <div style="border-right: 2px solid white;">
+                    <h2>WEB DEVELOPMENT</h2><br>
+                    <p >Focuses on crafting and maintaining responsive, accessible,
+                         and high-performance websites, ensuring seamless functionality across devices and browsers.</p>
+                </div>
+                <div style="border-right: 2px solid white">
+                    <h2>UI&UX DESIGN</h2><br>
+                    <p> Prioritizes user-centric design by conducting research, creating personas, 
+                        and mapping user journeys to inform design decisions.</p>
+                </div>
+                <div>
+                    <h2>Visual Design</h2><br>
+                    <p>Specializes in creating visually appealing layouts that balance aesthetics and 
+                        functionality using typography, color theory, and grid systems.</p>
+                </div>
+            </div>   
+         </div>
+        </div>
+        <div id="skill" class="table-title">
+            <h3> ACADEMIC DETAILS</h3><br>
+            <table>
+            <thead>
+                <tr>
+                    <th>YEAR</th>
+                    <th>DEGREE/EXAM</th>
+                    <th>INSTITUTION </th>
+                    <th>PERCENTAGE/MARKS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2022-2026</td>
+                    <td>B.TECH(IT)</td>
+                    <td>VCET</td>
+                    <td>8(CGPA)</td>
+                </tr>
+                <tr>
+                    <td>2021-2022</td>
+                    <td>HSLC</td>
+                    <td>Annamalaiyaar Matri.Hr.Sec.School</td>
+                    <td>82</td>
+                </tr>
+                <tr>
+                    <td>2019-2020</td>
+                    <td>SSLC</td>
+                    <td>Annamalaiyaar Matric.Hr.Sec.School</td>
+                    <td>88.83</td>
+                </tr>
+            </tbody>
+        </table>
+            <section id="projects">
+                <center><h3>PROJECTS DONE</h3></center>
+                <div class="project">
+                    <h4>PROJECT1:Natural skincare Product</h4>
+                    <p>Developed a website dedicated to Natural skincare product, 
+                        emphasizing natural ingredients and their benefits for skin health.
+                         The platform features detailed product descriptions, highlighting the
+                          unique qualities of each product, such as moisturizing properties and eco-friendly sourcing.</p>
+                </div>
+                <div class="project">
+                    <h4>PROJECT2:Portfolio </h4>
+                    <p> I have developed a professional portfolio to
+                         showcase my web development skills and projects. 
+                         This portfolio highlights my technical expertise, 
+                         project experience, and passion for creating user-friendly web applications.</p>
+                </div>
+                <div class="project">
+                    <h4>PROJECT3:web calculator</h4>
+                    <p>Effortlessly perform calculations with our intuitive web calculator. 
+                        Designed for simplicity and accuracy, it handles basic arithmetic and 
+                        more complex functions with ease.</p>
+                </div>
+            </section>
+       </div>
+</body>
+<footer id="contact">
+    <br>
+   <h2>Thank you for taking the time to read my website</h2>
+    <a href="mailto:alagupriya14112004@gmail.com"><i class='bx bxl-gmail'></i></a>
+    <a href="tel:8870399669"><i class='bx bx-phone'></i></a>
+    <a href="https://www.linkedin.com/in/alagu-priya/"><i class='bx bxl-linkedin'></i></a>
+    <a href="https://github.com/alagupriya14112004"><i class='bx bxl-github' ></i></a>
+    <p style="color:#ededed">&copy;2024 Personal Portfolio.All rights reserved.</p>
+</footer>
+</html>
